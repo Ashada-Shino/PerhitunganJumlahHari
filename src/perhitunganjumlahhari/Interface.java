@@ -5,6 +5,11 @@
  */
 package perhitunganjumlahhari;
 
+import java.awt.Color;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Ashada
@@ -16,6 +21,7 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface() {
         initComponents();
+        tahunTF.requestFocus();
     }
 
     /**
@@ -27,21 +33,303 @@ public class Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        TFpanel = new javax.swing.JPanel();
+        tahunTF = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        bulanCB = new javax.swing.JComboBox<>();
+        jumlahhariTF = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        btnhitung = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        btnsimpan = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        btnsimpan1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Aplikasi Penentu Jumlah Hari");
+        setResizable(false);
+
+        jPanel1.setBackground(new java.awt.Color(41, 54, 63));
+
+        TFpanel.setBackground(new java.awt.Color(41, 54, 63));
+        TFpanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(41, 54, 63))); // NOI18N
+
+        tahunTF.setBackground(new java.awt.Color(41, 54, 63));
+        tahunTF.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        tahunTF.setForeground(new java.awt.Color(255, 255, 255));
+        tahunTF.setBorder(javax.swing.BorderFactory.createTitledBorder(null, " Tahun :", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Century Gothic", 1, 11), new java.awt.Color(255, 255, 255))); // NOI18N
+
+        jLabel1.setBackground(new java.awt.Color(41, 54, 63));
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Bulan :");
+
+        bulanCB.setBackground(new java.awt.Color(41, 54, 63));
+        bulanCB.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
+        bulanCB.setForeground(new java.awt.Color(255, 255, 255));
+        bulanCB.setMaximumRowCount(4);
+        bulanCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember" }));
+        bulanCB.setBorder(null);
+
+        javax.swing.GroupLayout TFpanelLayout = new javax.swing.GroupLayout(TFpanel);
+        TFpanel.setLayout(TFpanelLayout);
+        TFpanelLayout.setHorizontalGroup(
+            TFpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TFpanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TFpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tahunTF)
+                    .addGroup(TFpanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 201, Short.MAX_VALUE))
+                    .addComponent(bulanCB, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        TFpanelLayout.setVerticalGroup(
+            TFpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TFpanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tahunTF, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addGap(5, 5, 5)
+                .addComponent(bulanCB, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jumlahhariTF.setEditable(false);
+        jumlahhariTF.setBackground(new java.awt.Color(41, 54, 63));
+        jumlahhariTF.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jumlahhariTF.setForeground(new java.awt.Color(255, 255, 255));
+        jumlahhariTF.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Jumlah Hari :", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Century Gothic", 1, 11), new java.awt.Color(255, 255, 255))); // NOI18N
+
+        jPanel2.setBackground(new java.awt.Color(41, 54, 63));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Action Button", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 11), new java.awt.Color(255, 255, 255))); // NOI18N
+
+        btnhitung.setBackground(new java.awt.Color(110, 217, 161));
+        btnhitung.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnhitung.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnhitungMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnhitungMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnhitungMousePressed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("HITUNG");
+
+        javax.swing.GroupLayout btnhitungLayout = new javax.swing.GroupLayout(btnhitung);
+        btnhitung.setLayout(btnhitungLayout);
+        btnhitungLayout.setHorizontalGroup(
+            btnhitungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnhitungLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69))
+        );
+        btnhitungLayout.setVerticalGroup(
+            btnhitungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnhitungLayout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        btnsimpan.setBackground(new java.awt.Color(41, 54, 63));
+        btnsimpan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        btnsimpan.setForeground(new java.awt.Color(255, 255, 255));
+        btnsimpan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnsimpan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnsimpanMousePressed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Simpan");
+
+        javax.swing.GroupLayout btnsimpanLayout = new javax.swing.GroupLayout(btnsimpan);
+        btnsimpan.setLayout(btnsimpanLayout);
+        btnsimpanLayout.setHorizontalGroup(
+            btnsimpanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnsimpanLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69))
+        );
+        btnsimpanLayout.setVerticalGroup(
+            btnsimpanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnsimpanLayout.createSequentialGroup()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        btnsimpan1.setBackground(new java.awt.Color(41, 54, 63));
+        btnsimpan1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        btnsimpan1.setForeground(new java.awt.Color(255, 255, 255));
+        btnsimpan1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnsimpan1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnsimpan1MousePressed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Clear");
+
+        javax.swing.GroupLayout btnsimpan1Layout = new javax.swing.GroupLayout(btnsimpan1);
+        btnsimpan1.setLayout(btnsimpan1Layout);
+        btnsimpan1Layout.setHorizontalGroup(
+            btnsimpan1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnsimpan1Layout.createSequentialGroup()
+                .addContainerGap(76, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69))
+        );
+        btnsimpan1Layout.setVerticalGroup(
+            btnsimpan1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnsimpan1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnsimpan1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnsimpan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnhitung, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(btnsimpan1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnsimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnhitung, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(TFpanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jumlahhariTF))
+                .addGap(42, 42, 42)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(TFpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jumlahhariTF, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnhitungMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhitungMouseEntered
+        // TODO add your handling code here:
+        btnhitung.setBackground(new Color(60,179,123));
+    }//GEN-LAST:event_btnhitungMouseEntered
+
+    private void btnhitungMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhitungMouseExited
+        // TODO add your handling code here:
+        btnhitung.setBackground(new Color(110,217,161));
+    }//GEN-LAST:event_btnhitungMouseExited
+
+    private void btnhitungMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhitungMousePressed
+        // TODO add your handling code here:
+        if (tahunTF.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: Isian Tahun kosong!",
+                    "Error: Isian Tahun Kosong",
+                    JOptionPane.WARNING_MESSAGE);
+        } else {
+            int tahun = Integer.parseInt(tahunTF.getText());
+            int jumlahHari;
+            if (bulanCB.getSelectedItem().equals("Februari")) {
+                if (((tahun % 4 == 0) && !(tahun % 100 == 0)) || (tahun % 400 == 0))
+                     jumlahHari = 29;
+                else jumlahHari = 28;
+            }else if (bulanCB.getSelectedItem().equals("April") ||
+                    bulanCB.getSelectedItem().equals("Juni") ||
+                    bulanCB.getSelectedItem().equals("September") ||
+                    bulanCB.getSelectedItem().equals("November")) {
+                    jumlahHari = 30;
+            } else {
+                jumlahHari = 31;
+            }
+            jumlahhariTF.setText(jumlahHari + " Hari");
+        }
+    }//GEN-LAST:event_btnhitungMousePressed
+
+    private void btnsimpan1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsimpan1MousePressed
+        // TODO add your handling code here:
+        tahunTF.setText("");
+        bulanCB.setSelectedItem("Januari");
+        jumlahhariTF.setText("");
+    }//GEN-LAST:event_btnsimpan1MousePressed
+
+    private void btnsimpanMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsimpanMousePressed
+        // TODO add your handling code here:
+        try {
+            //Buat file
+            BufferedWriter out = new BufferedWriter(new FileWriter("Jumlahhari.txt"));
+            //Simpan ke File
+            out.write("Jumlah Hari Pada Tahun " + tahunTF.getText() +
+                    " Bulan " + bulanCB.getSelectedItem() + 
+                    " Adalah " + jumlahhariTF.getText());
+            //Tampilan dialog bila berhasil
+            JOptionPane.showMessageDialog(null, "Berhasil Disimpan dalam File");
+            out.close();
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_btnsimpanMousePressed
 
     /**
      * @param args the command line arguments
@@ -79,5 +367,18 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel TFpanel;
+    private javax.swing.JPanel btnhitung;
+    private javax.swing.JPanel btnsimpan;
+    private javax.swing.JPanel btnsimpan1;
+    private javax.swing.JComboBox<String> bulanCB;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jumlahhariTF;
+    private javax.swing.JTextField tahunTF;
     // End of variables declaration//GEN-END:variables
 }
