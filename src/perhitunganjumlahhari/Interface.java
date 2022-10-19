@@ -6,6 +6,7 @@
 package perhitunganjumlahhari;
 
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import javax.swing.JOptionPane;
@@ -46,6 +47,9 @@ public class Interface extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnsimpan1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplikasi Penentu Jumlah Hari");
@@ -54,15 +58,20 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(41, 54, 63));
 
         TFpanel.setBackground(new java.awt.Color(41, 54, 63));
-        TFpanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(41, 54, 63))); // NOI18N
+        TFpanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, " ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(41, 54, 63))); // NOI18N
 
         tahunTF.setBackground(new java.awt.Color(41, 54, 63));
         tahunTF.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         tahunTF.setForeground(new java.awt.Color(255, 255, 255));
-        tahunTF.setBorder(javax.swing.BorderFactory.createTitledBorder(null, " Tahun :", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Century Gothic", 1, 11), new java.awt.Color(255, 255, 255))); // NOI18N
+        tahunTF.setBorder(javax.swing.BorderFactory.createTitledBorder(null, " Tahun :", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Century Gothic", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        tahunTF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tahunTFKeyTyped(evt);
+            }
+        });
 
         jLabel1.setBackground(new java.awt.Color(41, 54, 63));
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bulan :");
 
@@ -104,10 +113,11 @@ public class Interface extends javax.swing.JFrame {
         jumlahhariTF.setBackground(new java.awt.Color(41, 54, 63));
         jumlahhariTF.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         jumlahhariTF.setForeground(new java.awt.Color(255, 255, 255));
-        jumlahhariTF.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Jumlah Hari :", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Century Gothic", 1, 11), new java.awt.Color(255, 255, 255))); // NOI18N
+        jumlahhariTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jumlahhariTF.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Jumlah Hari :", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Century Gothic", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jPanel2.setBackground(new java.awt.Color(41, 54, 63));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Action Button", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 11), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Action Button", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         btnhitung.setBackground(new java.awt.Color(110, 217, 161));
         btnhitung.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -188,7 +198,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Clear");
+        jLabel5.setText("Hapus");
 
         javax.swing.GroupLayout btnsimpan1Layout = new javax.swing.GroupLayout(btnsimpan1);
         btnsimpan1.setLayout(btnsimpan1Layout);
@@ -221,7 +231,7 @@ public class Interface extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addGap(38, 38, 38)
                 .addComponent(btnsimpan1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnsimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -235,32 +245,40 @@ public class Interface extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(TFpanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jumlahhariTF))
-                .addGap(42, 42, 42)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(TFpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jumlahhariTF, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(TFpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jumlahhariTF, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,6 +302,7 @@ public class Interface extends javax.swing.JFrame {
     private void btnhitungMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhitungMousePressed
         // TODO add your handling code here:
         if (tahunTF.getText().isEmpty()) {
+            getToolkit().beep();
             JOptionPane.showMessageDialog(null,
                     "Error: Isian Tahun kosong!",
                     "Error: Isian Tahun Kosong",
@@ -331,6 +350,23 @@ public class Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnsimpanMousePressed
 
+    private void tahunTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tahunTFKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (! ((c >= '0') && (c<='9') ||
+              (c == KeyEvent.VK_BACK_SPACE) ||
+              (c == KeyEvent.VK_DELETE))
+            )
+        {
+            getToolkit().beep();
+            JOptionPane.showMessageDialog(null,
+                    "Input Nilai Bukan Numerik (Digit)",
+                    "Warning",
+                    JOptionPane.WARNING_MESSAGE);
+            evt.consume();
+        }
+    }//GEN-LAST:event_tahunTFKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -376,6 +412,9 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jumlahhariTF;
