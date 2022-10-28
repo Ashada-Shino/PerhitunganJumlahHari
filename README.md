@@ -1,4 +1,4 @@
-# PerhitunganJumlahHari
+# Perhitungan Jumlah Hari
 
 ![Layer 1 copy](https://user-images.githubusercontent.com/90718856/198613145-221e2f95-a10e-44b8-829b-c48bcdf7e0fb.png)
 
