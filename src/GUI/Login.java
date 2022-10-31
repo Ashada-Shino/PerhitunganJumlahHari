@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package perhitunganjumlahhari;
+package GUI;
 
 import java.awt.Color;
 import javax.swing.JOptionPane;
