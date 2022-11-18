@@ -2,7 +2,7 @@
 </br>
 
 ### Tampilan Login
-![Layer 1 copy](https://user-images.githubusercontent.com/90718856/198613145-221e2f95-a10e-44b8-829b-c48bcdf7e0fb.png)
+![Layer 2](https://user-images.githubusercontent.com/90718856/202606105-18112a8d-5eb9-4f27-b49e-0e49878ad801.png)
 </br></br>
 
 ### Tampilan Aplikasi
